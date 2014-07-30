@@ -1,0 +1,11 @@
+{
+  "name": "maken",
+  "version": "0.1.0",
+  "description": "Make an array of size n of an object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Jamison Dance <jergason@gmail.com> (http://jamisondance.com)",
+  "license": "BSD-2-Clause"
+}

@@ -17,3 +17,13 @@ test('it makes an array of n items', function() {
   assert.equal(arr.length, 3);
   assert.deepEqual(['durp', 'durp', 'durp'], arr);
 });
+
+test('it makes an array of n items when given a function', function() {
+  var i = 0;
+  function yolo() {
+    return 'YOLO'.substr(i++, 1) || 'I HAVE BUT ONE LIFE TO YOLO';
+  }
+
+  var myYolos = maken(6, yolo);
+  assert.deepEqual(['Y', 'O', 'L', 'O', 'I HAVE BUT ONE LIFE TO YOLO', 'I HAVE BUT ONE LIFE TO YOLO'], myYolos);
+});

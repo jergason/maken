@@ -14,6 +14,20 @@ var myArray = maken(3, 'blind mouse');
 console.log(myArray); // ['blind mouse', 'blind mouse', 'blind mouse']
 ```
 
+Optionally pass in a function instead of an object to make an array of whatever
+the function returns instead!
+
+```javascript
+var maken = require('maken');
+
+var i = 0;
+function yolo() {
+  return 'YOLO'.substr(i++, 1) || 'I HAVE BUT ONE LIFE TO YOLO';
+}
+
+var myYolos = maken(6, yolo); // ['Y', 'O', 'L', 'O', 'I HAVE BUT ONE LIFE TO YOLO', 'I HAVE BUT ONE LIFE TO YOLO'];
+```
+
 ## Installation
 
 ```bash

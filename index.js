@@ -12,7 +12,7 @@ function makeN(n, obj) {
     if (typeof obj == 'function') {
       return obj();
     } else {
-      return obj;
+      return JSON.parse(JSON.stringify(obj));
     }
   }
   // gotta use .apply(null) because Array(n) makes a new empty array of size n
